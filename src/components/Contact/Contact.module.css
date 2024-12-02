@@ -1,0 +1,27 @@
+.contactItem {
+  background-color: rgba(190, 242, 242, 0.882);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+p svg {
+  margin-right: 10px;
+}
+
+p:first-child {
+  margin-bottom: 8px;
+}
+
+.contactBtn {
+  min-width: 60px;
+  padding: 4px;
+  background-color: rgb(127, 238, 228);
+  border-radius: 5px;
+  border: 1px solid black;
+}

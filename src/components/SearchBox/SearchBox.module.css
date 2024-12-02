@@ -1,0 +1,15 @@
+.searshBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  min-width: 400px;
+}
+
+.searchInput {
+  background-color: white;
+  border-radius: 5px;
+  padding-left: 10px;
+  height: 30px;
+}

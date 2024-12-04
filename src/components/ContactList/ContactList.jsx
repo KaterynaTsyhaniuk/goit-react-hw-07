@@ -5,8 +5,8 @@ function ContactList() {
   const selectContacts = useSelector((state) => state.contacts.items);
   const selectNameFilter = useSelector((state) => state.filters.name);
 
-  console.log("Contacts:", selectContacts);
-  console.log("Filter:", selectNameFilter);
+  // console.log("Contacts:", selectContacts);
+  // console.log("Filter:", selectNameFilter);
   const filteredData = selectContacts.filter((item) =>
     item.name.toLowerCase().includes(selectNameFilter)
   );

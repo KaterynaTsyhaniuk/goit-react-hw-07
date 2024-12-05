@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm/ContactForm";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchContacts } from "../redux/contactsOps";
-import { selectLoading } from "../redux/contactsSlice";
+import { selectError, selectLoading } from "../redux/contactsSlice";
 import Loader from "./Loader/Loader";
 function App() {
   const dispatch = useDispatch();
@@ -13,13 +13,15 @@ function App() {
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
+
+  const error = useSelector(selectError);
   return (
     <div>
       <h1>Phonebook</h1>
+      {error && <p> Error: {error}</p>}
       <ContactForm />
       <SearchBox />
-      {loading && <Loader />}
-      <ContactList />
+      {loading ? <Loader /> : <ContactList />}
     </div>
   );
 }
